@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criosho BA | Food & Traditions</title>
+  <meta name="description" content="Experiencia auténtica de asado argentino en San Telmo, Buenos Aires." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#hero">
+      <img src="./assets/logos/logo.png" alt="Criosho BA" class="brand__logo" />
+      <span>Criosho BA</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="nav">
+      <a href="#hero">Inicio</a>
+      <a href="#cultural">Experiencia</a>
+      <a href="#gastronomia">Gastronomía</a>
+      <a href="#reservas">Reservas</a>
+      <a href="#tarifas">Tarifas</a>
+      <a href="#operativa">Operativa</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="section hero">
+      <div class="slider" id="slider">
+        <div class="slide is-active" style="background-image: url('./assets/images/1.jpeg');"></div>
+        <div class="slide" style="background-image: url('./assets/images/2.jpeg');"></div>
+        <div class="slide" style="background-image: url('./assets/images/7.jpg');"></div>
+        <div class="slide" style="background-image: url('./assets/images/10.jpg');"></div>
+      </div>
+      <div class="overlay overlay--dark"></div>
+      <div class="content hero__content">
+        <span class="eyebrow">Food & Traditions</span>
+        <h1>Experiencia auténtica de asado argentino</h1>
+        <p class="lead">San Telmo · Buenos Aires</p>
+        <div class="hero__actions">
+          <a href="#cultural" class="btn btn--primary">Descubrir la experiencia</a>
+          <a href="#contacto" class="btn btn--ghost">Reservas e información</a>
+        </div>
+      </div>
+      <div class="slider-dots" id="sliderDots" aria-label="Navegación del slider"></div>
+      <a href="#cultural" class="scroll-indicator" aria-label="Ir a la siguiente sección">
+        <span></span>
+      </a>
+    </section>
+
+    <section id="cultural" class="section" style="--bg-image: url('./assets/images/2.jpeg'); --overlay: rgba(37,84,75,0.66);">
+      <div class="overlay"></div>
+      <div class="content content--narrow">
+        <h2>Una experiencia cultural alrededor del asado</h2>
+        <p>CRIOSHO BA abre las puertas de una casa argentina en el histórico barrio de San Telmo para compartir con visitantes de todo el mundo uno de los rituales más importantes de nuestra cultura: el encuentro alrededor del fuego y la mesa.</p>
+        <p>Más que una cena, es una experiencia de hospitalidad donde los invitados descubren el asado argentino, nuestros vinos y la forma en que los argentinos celebramos la comida.</p>
+      </div>
+    </section>
+
+    <section id="gastronomia" class="section" style="--bg-image: url('./assets/images/3.jpeg'); --overlay: rgba(37,84,75,0.78);">
+      <div class="overlay"></div>
+      <div class="content content--wide">
+        <h2>La experiencia gastronómica</h2>
+        <div class="grid-text">
+          <p>La experiencia comienza con una picada tradicional con embutidos, quesos, aceitunas, pan y salsas caseras acompañadas por vermouth.</p>
+          <p>El plato principal incluye cortes clásicos del asado argentino: chorizo, morcilla, vacío y otros cortes preparados a fuego lento.</p>
+          <p>Se acompaña con ensaladas de estación, vegetales grillados y chimichurri casero.</p>
+          <p>Incluye vino argentino (una botella cada dos personas), bebidas sin alcohol, postre dulce y café o té.</p>
+          <p>El menú es flexible y puede adaptarse para vegetarianos, veganos o dietas sin gluten.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservas" class="section" style="--bg-image: url('./assets/images/4.jpeg'); --overlay: rgba(0,0,0,0.55);">
+      <div class="overlay"></div>
+      <div class="content content--narrow">
+        <h2>Información de reservas</h2>
+        <p>Las reservas deben realizarse con al menos 24 horas de anticipación.</p>
+        <p>La experiencia se ofrece durante todo el año en formato privado o para grupos.</p>
+        <p>El número de participantes puede adaptarse según el grupo manteniendo siempre una atmósfera íntima y personalizada.</p>
+        <p>Las agencias, hoteles o guías pueden coordinar experiencias especiales para sus huéspedes.</p>
+      </div>
+    </section>
+
+    <section id="tarifas" class="section" style="--bg-image: url('./assets/images/5.jpeg'); --overlay: rgba(0,0,0,0.58);">
+      <div class="overlay"></div>
+      <div class="content content--narrow">
+        <h2>Tarifas y comisiones</h2>
+        <p>Las agencias de turismo, hoteles, guías o tour leaders reciben una comisión del 5% del valor total de la experiencia.</p>
+        <p>La comisión se abona en efectivo el día del servicio.</p>
+        <div class="card-list">
+          <div class="card-item"><strong>Efectivo</strong><span>5% de descuento</span></div>
+          <div class="card-item"><strong>Tarjeta</strong><span>Mediante terminal MercadoPago</span></div>
+        </div>
+        <p>Para colaboraciones frecuentes podemos coordinar condiciones especiales.</p>
+      </div>
+    </section>
+
+    <section id="operativa" class="section section--solid" style="--solid-bg: #25544b; --overlay: rgba(37,84,75,0.18);">
+      <div class="overlay"></div>
+      <div class="content content--narrow">
+        <h2>Información operativa para agencias</h2>
+        <div class="info-grid">
+          <div class="info-item"><span>Duración aproximada</span><strong>2.5 a 3 horas</strong></div>
+          <div class="info-item"><span>Capacidad</span><strong>Grupos pequeños y privados</strong></div>
+          <div class="info-item"><span>Idiomas</span><strong>Español / English</strong></div>
+          <div class="info-item"><span>Ubicación</span><strong>San Telmo · Buenos Aires</strong></div>
+          <div class="info-item"><span>Tipo de experiencia</span><strong>Private Dining Experience</strong></div>
+          <div class="info-item"><span>Reservas</span><strong>Mínimo 24 horas de anticipación</strong></div>
+        </div>
+        <div class="ideal-box">
+          <span>Ideal para</span>
+          <ul>
+            <li>Viajeros culturales</li>
+            <li>Experiencias gastronómicas</li>
+            <li>Grupos pequeños</li>
+            <li>Turismo premium</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section" style="--bg-image: url('./assets/images/10.jpg'); --overlay: rgba(0,0,0,0.6);">
+      <div class="overlay"></div>
+      <div class="content content--narrow">
+        <h2>Contacto</h2>
+        <p class="contact-intro">CRIOSHO BA – Food & Traditions</p>
+        <div class="contact-list">
+          <a href="https://wa.me/541173698356" target="_blank" rel="noreferrer"><span>Reservas e información</span><strong>+54 11 7369 8356</strong></a>
+          <a href="https://instagram.com/crioshoba" target="_blank" rel="noreferrer"><span>Instagram</span><strong>@crioshoba</strong></a>
+          <a href="mailto:crioshoba@gmail.com"><span>Email</span><strong>crioshoba@gmail.com</strong></a>
+        </div>
+        <p>Será un placer recibir a sus huéspedes y compartir una auténtica experiencia argentina.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
