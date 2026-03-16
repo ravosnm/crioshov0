@@ -7,136 +7,201 @@
   <meta name="description" content="Experiencia auténtica de asado argentino en San Telmo, Buenos Aires." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <header class="topbar" id="topbar">
-    <a class="brand" href="#hero">
-      <img src="./assets/logos/logo.png" alt="Criosho BA" class="brand__logo" />
-      <span>Criosho BA</span>
+  <header class="topbar">
+    <a href="#home" class="brand" aria-label="Criosho BA">
+      <span class="brand__logo-wrap">
+        <img class="brand__logo" src="./assets/logos/logo.png" alt="Criosho BA logo" />
+      </span>
+      <span class="brand__text">Criosho BA</span>
     </a>
 
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
 
-    <nav class="nav" id="nav">
-      <a href="#hero">Inicio</a>
-      <a href="#cultural">Experiencia</a>
-      <a href="#gastronomia">Gastronomía</a>
-      <a href="#reservas">Reservas</a>
-      <a href="#tarifas">Tarifas</a>
-      <a href="#operativa">Operativa</a>
-      <a href="#contacto">Contacto</a>
+    <nav class="nav" id="siteNav">
+      <a href="#home" data-nav="home" data-i18n="nav.home">Inicio</a>
+      <a href="#experience" data-nav="experience" data-i18n="nav.experience">Experiencia</a>
+      <a href="#gastronomy" data-nav="gastronomy" data-i18n="nav.gastronomy">Gastronomía</a>
+      <a href="#reservations" data-nav="reservations" data-i18n="nav.reservations">Reservas</a>
+      <a href="#rates" data-nav="rates" data-i18n="nav.rates">Tarifas</a>
+      <a href="#operations" data-nav="operations" data-i18n="nav.operations">Operativa</a>
+      <a href="#contact" data-nav="contact" data-i18n="nav.contact">Contacto</a>
+
+      <label class="lang-switch" for="languageSelect">
+        <span data-i18n="nav.language">Idioma</span>
+        <select id="languageSelect" aria-label="Seleccionar idioma">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+        </select>
+      </label>
     </nav>
   </header>
 
   <main>
-    <section id="hero" class="section hero">
-      <div class="slider" id="slider">
-        <div class="slide is-active" style="background-image: url('./assets/images/1.jpeg');"></div>
-        <div class="slide" style="background-image: url('./assets/images/2.jpeg');"></div>
-        <div class="slide" style="background-image: url('./assets/images/7.jpg');"></div>
-        <div class="slide" style="background-image: url('./assets/images/10.jpg');"></div>
+    <section id="home" class="section hero">
+      <div class="slider" id="heroSlider">
+        <div class="slide is-active" style="background-image:url('./assets/images/1.jpeg')"></div>
+        <div class="slide" style="background-image:url('./assets/images/2.jpeg')"></div>
+        <div class="slide" style="background-image:url('./assets/images/3.jpeg')"></div>
+        <div class="slide" style="background-image:url('./assets/images/4.jpeg')"></div>
       </div>
       <div class="overlay overlay--dark"></div>
-      <div class="content hero__content">
-        <span class="eyebrow">Food & Traditions</span>
-        <h1>Experiencia auténtica de asado argentino</h1>
-        <p class="lead">San Telmo · Buenos Aires</p>
+
+      <div class="content content--narrow">
+        <div class="hero-logo-wrap">
+          <img class="hero-logo" src="./assets/logos/logo.png" alt="Criosho BA logo" />
+        </div>
+        <p class="hero-kicker" data-i18n="hero.kicker">San Telmo – Buenos Aires</p>
+        <h1 data-i18n="hero.title">Experiencia auténtica de asado argentino</h1>
+        <p class="lead" data-i18n="hero.lead">Viví una propuesta íntima y cultural alrededor del fuego, la mesa y la hospitalidad argentina.</p>
+
         <div class="hero__actions">
-          <a href="#cultural" class="btn btn--primary">Descubrir la experiencia</a>
-          <a href="#contacto" class="btn btn--ghost">Reservas e información</a>
+          <a class="btn btn--primary" href="#reservations" data-i18n="hero.ctaPrimary">Reservar experiencia</a>
+          <a class="btn btn--ghost" href="#contact" data-i18n="hero.ctaSecondary">Ver contacto</a>
         </div>
       </div>
-      <div class="slider-dots" id="sliderDots" aria-label="Navegación del slider"></div>
-      <a href="#cultural" class="scroll-indicator" aria-label="Ir a la siguiente sección">
-        <span></span>
-      </a>
+
+      <div class="slider-dots" id="sliderDots" aria-label="Slider de imágenes"></div>
+      <div class="scroll-indicator" aria-hidden="true"><span></span></div>
     </section>
 
-    <section id="cultural" class="section" style="--bg-image: url('./assets/images/2.jpeg'); --overlay: rgba(37,84,75,0.66);">
-      <div class="overlay"></div>
-      <div class="content content--narrow">
-        <h2>Una experiencia cultural alrededor del asado</h2>
-        <p>CRIOSHO BA abre las puertas de una casa argentina en el histórico barrio de San Telmo para compartir con visitantes de todo el mundo uno de los rituales más importantes de nuestra cultura: el encuentro alrededor del fuego y la mesa.</p>
-        <p>Más que una cena, es una experiencia de hospitalidad donde los invitados descubren el asado argentino, nuestros vinos y la forma en que los argentinos celebramos la comida.</p>
-      </div>
-    </section>
-
-    <section id="gastronomia" class="section" style="--bg-image: url('./assets/images/3.jpeg'); --overlay: rgba(37,84,75,0.78);">
+    <section id="experience" class="section" style="--bg-image:url('./assets/images/5.jpeg'); --overlay:rgba(37,84,75,0.60)">
       <div class="overlay"></div>
       <div class="content content--wide">
-        <h2>La experiencia gastronómica</h2>
-        <div class="grid-text">
-          <p>La experiencia comienza con una picada tradicional con embutidos, quesos, aceitunas, pan y salsas caseras acompañadas por vermouth.</p>
-          <p>El plato principal incluye cortes clásicos del asado argentino: chorizo, morcilla, vacío y otros cortes preparados a fuego lento.</p>
-          <p>Se acompaña con ensaladas de estación, vegetales grillados y chimichurri casero.</p>
-          <p>Incluye vino argentino (una botella cada dos personas), bebidas sin alcohol, postre dulce y café o té.</p>
-          <p>El menú es flexible y puede adaptarse para vegetarianos, veganos o dietas sin gluten.</p>
+        <span class="eyebrow" data-i18n="experience.eyebrow">Más que una cena</span>
+        <h2 data-i18n="experience.title">Una experiencia cultural alrededor del asado</h2>
+        <div class="text-panel stack-panel">
+          <p data-i18n="experience.p1">CRIOSHO BA abre las puertas de una casa argentina en el histórico barrio de San Telmo para compartir con visitantes de todo el mundo uno de los rituales más importantes de nuestra cultura: el encuentro alrededor del fuego y la mesa.</p>
+          <p data-i18n="experience.p2">Más que una cena, es una experiencia de hospitalidad donde los invitados descubren el asado argentino, nuestros vinos y la forma en que los argentinos celebramos la comida.</p>
         </div>
       </div>
     </section>
 
-    <section id="reservas" class="section" style="--bg-image: url('./assets/images/4.jpeg'); --overlay: rgba(0,0,0,0.55);">
+    <section id="gastronomy" class="section" style="--bg-image:url('./assets/images/6.jpg'); --overlay:rgba(37,84,75,0.58)">
       <div class="overlay"></div>
-      <div class="content content--narrow">
-        <h2>Información de reservas</h2>
-        <p>Las reservas deben realizarse con al menos 24 horas de anticipación.</p>
-        <p>La experiencia se ofrece durante todo el año en formato privado o para grupos.</p>
-        <p>El número de participantes puede adaptarse según el grupo manteniendo siempre una atmósfera íntima y personalizada.</p>
-        <p>Las agencias, hoteles o guías pueden coordinar experiencias especiales para sus huéspedes.</p>
+      <div class="content content--wide">
+        <span class="eyebrow" data-i18n="gastronomy.eyebrow">La experiencia gastronómica</span>
+        <h2 data-i18n="gastronomy.title">Sabores que cuentan una historia</h2>
+        <div class="card-list glass-grid">
+          <article class="card-item glass-card">
+            <strong data-i18n="gastronomy.card1.title">Picada tradicional</strong>
+            <span data-i18n="gastronomy.card1.text">Embutidos, quesos, aceitunas, pan y salsas caseras acompañadas por vermouth.</span>
+          </article>
+          <article class="card-item glass-card">
+            <strong data-i18n="gastronomy.card2.title">Asado argentino</strong>
+            <span data-i18n="gastronomy.card2.text">Chorizo, morcilla, vacío y otros cortes preparados a fuego lento.</span>
+          </article>
+          <article class="card-item glass-card">
+            <strong data-i18n="gastronomy.card3.title">Acompañamientos</strong>
+            <span data-i18n="gastronomy.card3.text">Ensaladas de estación, vegetales grillados y chimichurri casero.</span>
+          </article>
+          <article class="card-item glass-card">
+            <strong data-i18n="gastronomy.card4.title">Bebidas y cierre</strong>
+            <span data-i18n="gastronomy.card4.text">Vino argentino, bebidas sin alcohol, postre dulce y café o té.</span>
+          </article>
+        </div>
+        <div class="text-panel compact-panel">
+          <p data-i18n="gastronomy.footer">El menú es flexible y puede adaptarse para vegetarianos, veganos o dietas sin gluten.</p>
+        </div>
       </div>
     </section>
 
-    <section id="tarifas" class="section" style="--bg-image: url('./assets/images/5.jpeg'); --overlay: rgba(0,0,0,0.58);">
+    <section id="reservations" class="section" style="--bg-image:url('./assets/images/7.jpg'); --overlay:rgba(37,84,75,0.62)">
       <div class="overlay"></div>
-      <div class="content content--narrow">
-        <h2>Tarifas y comisiones</h2>
-        <p>Las agencias de turismo, hoteles, guías o tour leaders reciben una comisión del 5% del valor total de la experiencia.</p>
-        <p>La comisión se abona en efectivo el día del servicio.</p>
-        <div class="card-list">
-          <div class="card-item"><strong>Efectivo</strong><span>5% de descuento</span></div>
-          <div class="card-item"><strong>Tarjeta</strong><span>Mediante terminal MercadoPago</span></div>
+      <div class="content content--wide">
+        <span class="eyebrow" data-i18n="reservations.eyebrow">Información de reservas</span>
+        <h2 data-i18n="reservations.title">Coordinación simple y personalizada</h2>
+        <div class="info-grid glass-grid">
+          <article class="info-item glass-card">
+            <strong data-i18n="reservations.item1.title">Anticipación</strong>
+            <span data-i18n="reservations.item1.text">Las reservas deben realizarse con al menos 24 horas de anticipación.</span>
+          </article>
+          <article class="info-item glass-card">
+            <strong data-i18n="reservations.item2.title">Formato</strong>
+            <span data-i18n="reservations.item2.text">La experiencia se ofrece durante todo el año en formato privado o para grupos.</span>
+          </article>
+          <article class="info-item glass-card">
+            <strong data-i18n="reservations.item3.title">Capacidad</strong>
+            <span data-i18n="reservations.item3.text">El número de participantes puede adaptarse según el grupo manteniendo siempre una atmósfera íntima y personalizada.</span>
+          </article>
+          <article class="info-item glass-card">
+            <strong data-i18n="reservations.item4.title">Partners</strong>
+            <span data-i18n="reservations.item4.text">Agencias, hoteles o guías pueden coordinar experiencias especiales para sus huéspedes.</span>
+          </article>
         </div>
-        <p>Para colaboraciones frecuentes podemos coordinar condiciones especiales.</p>
       </div>
     </section>
 
-    <section id="operativa" class="section section--solid" style="--solid-bg: #25544b; --overlay: rgba(37,84,75,0.18);">
+    <section id="rates" class="section" style="--bg-image:url('./assets/images/8.jpg'); --overlay:rgba(37,84,75,0.63)">
       <div class="overlay"></div>
-      <div class="content content--narrow">
-        <h2>Información operativa para agencias</h2>
-        <div class="info-grid">
-          <div class="info-item"><span>Duración aproximada</span><strong>2.5 a 3 horas</strong></div>
-          <div class="info-item"><span>Capacidad</span><strong>Grupos pequeños y privados</strong></div>
-          <div class="info-item"><span>Idiomas</span><strong>Español / English</strong></div>
-          <div class="info-item"><span>Ubicación</span><strong>San Telmo · Buenos Aires</strong></div>
-          <div class="info-item"><span>Tipo de experiencia</span><strong>Private Dining Experience</strong></div>
-          <div class="info-item"><span>Reservas</span><strong>Mínimo 24 horas de anticipación</strong></div>
+      <div class="content content--wide">
+        <span class="eyebrow" data-i18n="rates.eyebrow">Tarifas y comisiones</span>
+        <h2 data-i18n="rates.title">Condiciones para colaboradores</h2>
+        <div class="glass-grid split-grid">
+          <article class="glass-card text-card">
+            <p data-i18n="rates.p1">Las agencias de turismo, hoteles, guías o tour leaders reciben una comisión del 5% del valor total de la experiencia.</p>
+            <p data-i18n="rates.p2">La comisión se abona en efectivo el día del servicio.</p>
+          </article>
+          <article class="glass-card ideal-box">
+            <strong data-i18n="rates.methodsTitle">Formas de pago</strong>
+            <ul>
+              <li data-i18n="rates.method1">Efectivo (5% de descuento)</li>
+              <li data-i18n="rates.method2">Tarjeta mediante terminal MercadoPago</li>
+            </ul>
+            <p data-i18n="rates.p3">Para colaboraciones frecuentes podemos coordinar condiciones especiales.</p>
+          </article>
         </div>
-        <div class="ideal-box">
-          <span>Ideal para</span>
+      </div>
+    </section>
+
+    <section id="operations" class="section" style="--bg-image:url('./assets/images/9.jpg'); --overlay:rgba(37,84,75,0.62)">
+      <div class="overlay"></div>
+      <div class="content content--wide">
+        <span class="eyebrow" data-i18n="operations.eyebrow">Información operativa para agencias</span>
+        <h2 data-i18n="operations.title">Datos clave</h2>
+        <div class="info-grid glass-grid">
+          <article class="info-item glass-card"><strong data-i18n="operations.i1.title">Duración</strong><span data-i18n="operations.i1.text">2.5 a 3 horas</span></article>
+          <article class="info-item glass-card"><strong data-i18n="operations.i2.title">Capacidad</strong><span data-i18n="operations.i2.text">Grupos pequeños y privados</span></article>
+          <article class="info-item glass-card"><strong data-i18n="operations.i3.title">Idiomas</strong><span data-i18n="operations.i3.text">Español / English</span></article>
+          <article class="info-item glass-card"><strong data-i18n="operations.i4.title">Ubicación</strong><span data-i18n="operations.i4.text">Barrio de San Telmo – Buenos Aires</span></article>
+          <article class="info-item glass-card"><strong data-i18n="operations.i5.title">Tipo de experiencia</strong><span data-i18n="operations.i5.text">Private Dining Experience</span></article>
+          <article class="info-item glass-card"><strong data-i18n="operations.i6.title">Reserva mínima</strong><span data-i18n="operations.i6.text">24 horas de anticipación</span></article>
+        </div>
+        <article class="ideal-box glass-card ideal-box--centered">
+          <strong data-i18n="operations.idealTitle">Ideal para</strong>
           <ul>
-            <li>Viajeros culturales</li>
-            <li>Experiencias gastronómicas</li>
-            <li>Grupos pequeños</li>
-            <li>Turismo premium</li>
+            <li data-i18n="operations.ideal1">Viajeros culturales</li>
+            <li data-i18n="operations.ideal2">Experiencias gastronómicas</li>
+            <li data-i18n="operations.ideal3">Grupos pequeños</li>
+            <li data-i18n="operations.ideal4">Turismo premium</li>
           </ul>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section id="contacto" class="section" style="--bg-image: url('./assets/images/10.jpg'); --overlay: rgba(0,0,0,0.6);">
+    <section id="contact" class="section" style="--bg-image:url('./assets/images/10.jpg'); --overlay:rgba(37,84,75,0.68)">
       <div class="overlay"></div>
       <div class="content content--narrow">
-        <h2>Contacto</h2>
-        <p class="contact-intro">CRIOSHO BA – Food & Traditions</p>
+        <span class="eyebrow" data-i18n="contact.eyebrow">Contacto</span>
+        <h2 data-i18n="contact.title">Reservas e información</h2>
+        <p class="contact-intro text-panel compact-panel" data-i18n="contact.intro">Será un placer recibir a sus huéspedes y compartir una auténtica experiencia argentina.</p>
         <div class="contact-list">
-          <a href="https://wa.me/541173698356" target="_blank" rel="noreferrer"><span>Reservas e información</span><strong>+54 11 7369 8356</strong></a>
-          <a href="https://instagram.com/crioshoba" target="_blank" rel="noreferrer"><span>Instagram</span><strong>@crioshoba</strong></a>
-          <a href="mailto:crioshoba@gmail.com"><span>Email</span><strong>crioshoba@gmail.com</strong></a>
+          <a href="https://wa.me/541173698356" target="_blank" rel="noreferrer" class="glass-card">
+            <strong data-i18n="contact.phoneLabel">WhatsApp</strong>
+            <span>+54 11 7369 8356</span>
+          </a>
+          <a href="https://www.instagram.com/crioshoba" target="_blank" rel="noreferrer" class="glass-card">
+            <strong>Instagram</strong>
+            <span>@crioshoba</span>
+          </a>
+          <a href="mailto:crioshoba@gmail.com" class="glass-card">
+            <strong>Email</strong>
+            <span>crioshoba@gmail.com</span>
+          </a>
         </div>
-        <p>Será un placer recibir a sus huéspedes y compartir una auténtica experiencia argentina.</p>
       </div>
     </section>
   </main>
