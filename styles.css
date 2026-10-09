@@ -383,43 +383,32 @@ h2 {
   border-color: var(--brand-coral);
 }
 
-.scroll-indicator {
-  position: absolute;
-  left: 50%;
-  bottom: 72px;
-  z-index: 3;
-  transform: translateX(-50%);
+ .proposal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
 }
-
-.scroll-indicator span {
-  display: block;
-  width: 28px;
-  height: 46px;
-  border: 2px solid rgba(255,255,255,0.7);
+.proposal-card {
+  padding: 32px;
+  border: 1px solid rgba(248,238,232,0.25);
   border-radius: 20px;
-  position: relative;
+  background: rgba(35,24,18,0.78);
+  text-align: left;
+  text-shadow: none;
 }
-
-.scroll-indicator span::after {
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  width: 6px;
-  height: 10px;
-  border-radius: 999px;
-  background: var(--brand-coral);
-  transform: translateX(-50%);
-  animation: scrollHint 1.8s infinite;
+.proposal-card h3 {
+  margin: 0 0 22px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.1;
+  color: #f8eee8;
 }
+.proposal-card ul { margin: 0; padding-left: 20px; }
+.proposal-card li { line-height: 1.6; }
+.proposal-card li + li { margin-top: 12px; }
 
-@keyframes scrollHint {
-  0% { opacity: 0; transform: translate(-50%, 0); }
-  30% { opacity: 1; }
-  100% { opacity: 0; transform: translate(-50%, 16px); }
-}
-
-@media (max-width: 920px) {
+@media (max-width: 1180px) {
   .nav-toggle { display: block; }
   .nav {
     position: absolute;
@@ -444,7 +433,8 @@ h2 {
   }
   .card-list,
   .info-grid,
-  .split-grid { grid-template-columns: 1fr; }
+  .split-grid,
+  .proposal-grid { grid-template-columns: 1fr; }
   .section { padding-top: calc(var(--toolbar-height) + 28px); }
 }
 

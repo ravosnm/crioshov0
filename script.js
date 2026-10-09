@@ -4,6 +4,7 @@ const translations = {
     nav: {
       home: 'Inicio',
       experience: 'Experiencia',
+      proposals: 'Propuestas',
       gastronomy: 'Gastronomía',
       reservations: 'Reservas',
       rates: 'Tarifas',
@@ -24,6 +25,23 @@ const translations = {
       p1: 'CRIOSHO BA abre las puertas de una casa argentina en el histórico barrio de San Telmo para compartir con visitantes de todo el mundo uno de los rituales más importantes de nuestra cultura: el encuentro alrededor del fuego y la mesa.',
       p2: 'Más que una cena, es una experiencia de hospitalidad donde los invitados descubren el asado argentino, nuestros vinos y la forma en que los argentinos celebramos la comida.'
     },
+    proposals: {
+      "eyebrow": "Propuestas",
+      "title": "Dos formas de vivir Criosho",
+      "dinner": {
+            "title": "Cenas en la terraza",
+            "time": "Todos los días a las 19:00 hs.",
+            "regular": "Martes: servicio regular, sin mínimo de pasajeros.",
+            "duration": "Duración aproximada: 3 horas."
+      },
+      "tour": {
+            "title": "Tour por San Telmo + Asado en Casa",
+            "time": "Domingos: nos encontramos en la casa a las 10:30 hs.",
+            "walk": "Recorrido a pie de 1 hora para una introducción al barrio de San Telmo.",
+            "asado": "Luego compartimos la experiencia del asado en casa.",
+            "duration": "Duración aproximada: 4 horas."
+      }
+},
     gastronomy: {
       eyebrow: 'La experiencia gastronómica',
       title: 'Sabores que cuentan una historia',
@@ -44,7 +62,7 @@ const translations = {
     rates: {
       eyebrow: 'Tarifas y comisiones',
       title: 'Condiciones para colaboradores',
-      p1: 'Las agencias de turismo, hoteles, guías o tour leaders reciben una comisión del 5% del valor total de la experiencia.',
+      p1: 'Las agencias de turismo, hoteles, guías o tour leaders reciben una comisión por cada experiencia.',
       p2: 'La comisión se abona en efectivo el día del servicio.',
       methodsTitle: 'Formas de pago',
       method1: 'Efectivo (5% de descuento)',
@@ -54,7 +72,7 @@ const translations = {
     operations: {
       eyebrow: 'Información operativa para agencias',
       title: 'Datos clave',
-      i1: { title: 'Duración', text: '2.5 a 3 horas' },
+      i1: { title: 'Duración', text: '3 o 4 horas, según la propuesta' },
       i2: { title: 'Capacidad', text: 'Grupos pequeños y privados' },
       i3: { title: 'Idiomas', text: 'Español / English' },
       i4: { title: 'Ubicación', text: 'Barrio de San Telmo – Buenos Aires' },
@@ -78,6 +96,7 @@ const translations = {
     nav: {
       home: 'Home',
       experience: 'Experience',
+      proposals: 'Experiences',
       gastronomy: 'Gastronomy',
       reservations: 'Reservations',
       rates: 'Rates',
@@ -98,6 +117,23 @@ const translations = {
       p1: 'CRIOSHO BA opens the doors of an Argentine home in the historic neighborhood of San Telmo to share with visitors from around the world one of the most important rituals of our culture: gathering around the fire and the table.',
       p2: 'More than dinner, it is a hospitality experience where guests discover Argentine barbecue, our wines, and the way Argentines celebrate food.'
     },
+    proposals: {
+      "eyebrow": "Our experiences",
+      "title": "Two ways to experience Criosho",
+      "dinner": {
+            "title": "Dinners on the terrace",
+            "time": "Every day at 7:00 pm.",
+            "regular": "Tuesdays: regular service, with no minimum number of guests.",
+            "duration": "Approximate duration: 3 hours."
+      },
+      "tour": {
+            "title": "San Telmo Tour + Asado at Home",
+            "time": "Sundays: we meet at the house at 10:30 am.",
+            "walk": "A 1-hour walking tour for an introduction to the San Telmo neighborhood.",
+            "asado": "Then we share the asado experience at home.",
+            "duration": "Approximate duration: 4 hours."
+      }
+},
     gastronomy: {
       eyebrow: 'The gastronomic experience',
       title: 'Flavors that tell a story',
@@ -118,7 +154,7 @@ const translations = {
     rates: {
       eyebrow: 'Rates and commissions',
       title: 'Conditions for partners',
-      p1: 'Tour agencies, hotels, guides, or tour leaders receive a 5% commission on the total value of the experience.',
+      p1: 'Tour agencies, hotels, guides, or tour leaders receive a commission for each experience.',
       p2: 'The commission is paid in cash on the day of the service.',
       methodsTitle: 'Payment methods',
       method1: 'Cash (5% discount)',
@@ -128,7 +164,7 @@ const translations = {
     operations: {
       eyebrow: 'Operational information for agencies',
       title: 'Key details',
-      i1: { title: 'Duration', text: '2.5 to 3 hours' },
+      i1: { title: 'Duration', text: '3 or 4 hours, depending on the experience' },
       i2: { title: 'Capacity', text: 'Small and private groups' },
       i3: { title: 'Languages', text: 'Spanish / English' },
       i4: { title: 'Location', text: 'San Telmo neighborhood – Buenos Aires' },
@@ -212,7 +248,7 @@ const navToggle = $('#navToggle');
 const nav = $('#siteNav');
 navToggle?.addEventListener('click', () => {
   const isOpen = nav.classList.toggle('is-open');
-  document.body.classList.toggle('menu-open', isOpen && window.innerWidth <= 920);
+  document.body.classList.toggle('menu-open', isOpen && window.innerWidth <= 1180);
   navToggle.setAttribute('aria-expanded', String(isOpen));
 });
 
@@ -257,7 +293,7 @@ buildDots();
 startSlider();
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 920) {
+  if (window.innerWidth > 1180) {
     nav.classList.remove('is-open');
     document.body.classList.remove('menu-open');
     navToggle?.setAttribute('aria-expanded', 'false');
